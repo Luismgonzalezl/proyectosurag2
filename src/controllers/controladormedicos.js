@@ -1,22 +1,22 @@
+//Importaciones
+import {capturarDatos} from '../formularios/formularioMedicos.js'
+
+
 // etiquetas que controlo:
 let etiquetaNombre=document.getElementById("nombres")
 let etiquetaBoton=document.getElementById("botonenvio")
 let etiquetaDocumento=document.getElementById("documento")
+let etiquetaEspecialidad=document.getElementById("especialidad")
+let etiquetaRegistro=document.getElementById("registro")
+let etiquetaCorreo=document.getElementById("correo")
+let etiquetaSede=document.getElementById("sede")
+let etiquetaHorario=document.getElementById("horario")
+let etiquetaDescripcion=document.getElementById("descripcion")
+let etiquetaFoto=document.getElementById("foto")
 
 //detectar el evento de clic
 etiquetaBoton.addEventListener("click", function(evento){
     evento.preventDefault()
-    // Swal.fire(
-    //     'Exito',
-    //     'El especialista ha sido registrado',
-    //     'success'
-    //   )
-
-    //reciebiendo los datos del formulario
-    let nombresMedico=etiquetaNombre.value
-    console.log(nombresMedico)
-
-    let documentoMedico=etiquetaDocumento.value
-    console.log(documentoMedico)
+    capturarDatos(etiquetaNombre,etiquetaDocumento,etiquetaEspecialidad,etiquetaRegistro,etiquetaCorreo,etiquetaSede,etiquetaHorario,etiquetaDescripcion,etiquetaFoto)
 
 })
