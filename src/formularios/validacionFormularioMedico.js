@@ -1,3 +1,5 @@
+import {registrarMedico} from "../../services/registrarMedico.js"
+
 export function validarFormulario(datos){
     //Referenias a etiquetas que quiero validar
     let etiquetaNombre=document.getElementById("nombres")
@@ -28,6 +30,7 @@ export function validarFormulario(datos){
         etiquetaNombre.classList.remove("is-invalid")
         etiquetaDocumento.classList.add("is-invalid")
     }else{
+        registrarMedico(datos)
         etiquetaNombre.classList.remove("is-invalid")
         etiquetaDocumento.classList.remove("is-invalid")
     }
